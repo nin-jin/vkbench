@@ -2499,6 +2499,20 @@ declare namespace $.$$ {
 }
 
 declare namespace $ {
+    class $mol_icon_github_circle extends $mol_icon {
+        path(): string;
+    }
+}
+
+declare namespace $ {
+    class $mol_link_source extends $mol_link {
+        hint(): string;
+        sub(): readonly any[];
+        Icon(): $mol_icon_github_circle;
+    }
+}
+
+declare namespace $ {
     class $mol_check_icon extends $mol_check {
     }
 }
@@ -2539,6 +2553,7 @@ declare namespace $ {
         Modals(): $$.$my_vkbench_modals;
         section_tools(): readonly any[];
         Theme(): $$.$mol_theme_auto;
+        Sources(): $mol_link_source;
         Lights(): $$.$mol_lights_toggle;
         Default_link(): $$.$mol_link;
         Burn_link(): $$.$mol_link;
