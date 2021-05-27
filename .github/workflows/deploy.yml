@@ -19,7 +19,7 @@ jobs:
       with:
         token: ${{ secrets.GH_PAT }}
         package: 'my/vkbench'
-        module: 'root'
+        modules: 'root'
     
     - name: Deploy on GitHub Pages
       if: github.ref == 'refs/heads/master'
