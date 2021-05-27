@@ -1,0 +1,14 @@
+$my_vkbench_burn $mol_book2
+	pages /
+		<= List $mol_page
+			title @ \Burn
+			tools <= tools /
+			body /
+				<= Items $mol_list rows <= items /
+	Item!index $mol_view
+		minimal_height 40
+		sub /
+			<= Item_main!index $my_vkbench_check
+				title <= item_title!index @ \Random text
+				descr <= item_descr!index @ \Grab a cup of coffee
+			<= Item_addon!index $mol_check_box

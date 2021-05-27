@@ -1,0 +1,8 @@
+$my_vkbench_check $mol_check_box
+	label /
+		<= Title $mol_paragraph
+			sub /
+				<= title
+		<= Descr $mol_paragraph
+			sub /
+				<= descr \

@@ -1,0 +1,29 @@
+$my_vkbench_root $mol_book2
+	plugins /
+		<= Theme $mol_theme_auto
+	pages /
+		<= Menu $mol_page
+			title @ \Vkonnecte
+			tools /
+				<= Lights $mol_lights_toggle
+			body /
+				<= Sections $mol_list
+					rows <= sections /
+						<= Default_link $mol_link
+							arg * section \default
+							title @ \Default
+						<= Burn_link $mol_link
+							arg * section \burn
+							title @ \Burn
+						<= Modals_link $mol_link
+							arg * section \modals
+							title @ \Modals
+	Burn $my_vkbench_burn
+		tools <= section_tools
+	Modals $my_vkbench_modals
+		tools <= section_tools
+	section_tools /
+		<= Section_close $mol_link
+			arg * section null
+			sub /
+				<= Section_close_icon $mol_icon_cross

@@ -1,0 +1,85 @@
+$my_vkbench_modals $mol_book2
+	pages /
+		<= Sample $mol_page
+			title @ \Modals
+			tools <= tools /
+			body /
+				<= Open $mol_link
+					arg * filters \
+					title @ \Open modal
+		<= Filters $mol_page
+			title @ \Filters
+			tools /
+				<= Filters_close $mol_link
+					arg * filters null
+					sub /
+						<= Filters_close_icon $mol_icon_cross
+			body /
+				<= Form $mol_list
+					rows /
+						<= Info_link $mol_link
+							arg * info \
+							title @ \User Info
+						<= Country_field $mol_form_field
+							name @ \Country
+							control <= Country $mol_select
+								value?val <=> country?val \Russia
+								align \bottom_right
+								options /
+									\Russia
+									\Ukraine
+									\Belarus
+									\Kazakhstan
+									\Azerbaijan
+									\Armenia
+									\Georgia
+									\Izrael
+									\United States
+						<= City_field $mol_form_field
+							name @ \City
+							control <= City $mol_select
+								value?val <=> city?val \kirov
+								align \bottom_right
+								dictionary *
+									saint-petersburg @ \Saint-Petersburg
+									kirov @ \Kirov
+									moscow @ \Moscow
+						<= Gender_field $mol_form_field
+							name @ \Gender
+							control <= Gender $mol_switch
+								value?val <=> gender?val \other
+								options *
+									other @ \Other
+									male @ \Male
+									female @ \Female
+		<= Info $mol_page
+			title @ \User Info
+			tools /
+				<= Info_close $mol_link
+					arg * info null
+					sub /
+						<= Info_close_icon $mol_icon_cross
+			body /
+				<= Info_fields $mol_list
+					rows /
+						<= Birth_field $mol_labeler
+							title @ \Birth date
+							content /
+								<= Birth $mol_date
+									value_moment <= birth $mol_time_moment /
+										\1993-01-30
+									enabled false
+									align \bottom_right
+						<= Hometown_field $mol_labeler
+							title @ \Hometown
+							content /
+								<= Hometown $mol_string
+									value <= hometown \Erevan
+									enabled false
+						<= Emploee_field $mol_labeler
+							title @ \Place of work
+							content /
+								<= Emploee $mol_string
+									value <= emploee \VK Team
+									enabled false
+
