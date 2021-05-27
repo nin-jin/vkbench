@@ -5,6 +5,8 @@ $my_vkbench_root $mol_book2
 		<= Menu $mol_page
 			title @ \Vkonnecte
 			tools /
+				<= Sources $mol_link_source
+					uri \https://github.com/nin-jin/vkbench
 				<= Lights $mol_lights_toggle
 			body /
 				<= Sections $mol_list
