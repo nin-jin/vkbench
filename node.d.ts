@@ -2306,14 +2306,6 @@ declare namespace $ {
 }
 
 declare namespace $ {
-    class $mol_row extends $mol_view {
-    }
-}
-
-declare namespace $ {
-}
-
-declare namespace $ {
     class $mol_hor extends $mol_view {
     }
 }
@@ -2617,6 +2609,14 @@ declare namespace $ {
 
 declare namespace $ {
     function $mol_exec(this: $, dir: string, command: string, ...args: string[]): any;
+}
+
+declare namespace $ {
+    class $mol_row extends $mol_view {
+    }
+}
+
+declare namespace $ {
 }
 
 declare namespace $ {
