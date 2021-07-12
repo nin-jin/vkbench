@@ -2330,6 +2330,12 @@ declare namespace $ {
 }
 
 declare namespace $ {
+    class $mol_media extends $mol_object2 {
+        static match(query: string): boolean;
+    }
+}
+
+declare namespace $ {
     function $mol_lights(this: $, next?: boolean): boolean;
 }
 
